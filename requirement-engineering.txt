@@ -13,7 +13,7 @@ Existing:
 	d. He/she requires close monitoring because of comorbid condition: Called by Doctor periodically/
 =================================================================================
 Research Exploration: Centre for Disease Control and Prevention.
-
+https://www.cdc.gov/coronavirus/2019-ncov/index.html
 =================================================================================
 Solution:
 1. Create a centralized database for COVID19 patient if found positive.
@@ -37,5 +37,57 @@ to treat the patient and any doctor could treat the patient.
 18. On clicking the patient from list they will show the graph which tells the patient cure progress.
 ==================================================================================================
 Technical Implementation for each Step:
+1. Create a centralized database for COVID19 patient if found positive.
+2. Update whether he/she has comorbid condition, as well as the severity in his/her case.
+3. Update whenever he get's discharged.
+	a. Create an SQL based database table on 000webhost.com
+	b. The field will be 
+			 patient_id (VARCHAR(50), PRIMARY_KEY), 
+			 patient_name (TEXT,100),
+			 admitted_date (TIMESTAMP),
+			 hospital (TEXT,200),
+			 severity (VARCHAR,10),
+			 home_latitude(FLOAT),
+			 home_longitude(FLOAT),
+			 current_latitude(FLOAT),
+			 current_longitude(FLOAT),
+			 has_breathe (BOOLEAN),
+			 has_fever (BOOLEAN),
+			 has_cough (BOOLEAN),
+			 has_blueface_or_lips (BOOLEAN),
+			 is_comorbid (BOOLEAN),
+			 diseases (TEXT(400)),
+			 discharge_date (TIMESTAMP),
+			 image_of_patient (URL,100)
+	c. Writing pHp files for CRUD (Create, Read, Update, Delete) operations.
+		- connect.php (Database Connection).
+		- create.php (Insert the query to table).
+		- read.php (Read a row in table).
+		- update.php (Update a row in table if found).
+		- delete.php (Delete a row in table if found).
+		- image_upload.php(Upload image with patient_id.jpg to folder '/patients/')
+	d. Initially make the database and pHp files in XAMPP. 
+	e. Test the pHp API files with POSTMAN.
+	f. If CRUD operations are performed correctly. Deploy it to 000webhost.com
 
-
+4. Create a global database for the doctors who are treating the case for covid19 patient.
+			a. Create an SQL based database table on 000webhost.com
+			b. The field will be 
+					doctor_id (VARCHAR, PRIMARY_KEY),
+					doctor_name (TEXT),
+					hospital (TEXT),
+					mobile(NUMBER(10)),
+					email(VARCHAR(50)),
+					is_engaged(BOOLEAN)
+					image_doctor(URL,100)
+			c. Writing pHp files for CRUD (Create, Read, Update, Delete) operations.
+					- connect.php (Database Connection).
+					- create.php (Insert the query to table).
+					- read.php (Read a row in table).
+					- update.php (Update a row in table if found).
+					- delete.php (Delete a row in table if found).
+					- image_upload.php(Upload image with doctor.jpg to folder '/doctors/')
+			d. Initially make the database and pHp files in XAMPP. 
+			e. Test the pHp API files with POSTMAN.
+			f. If CRUD operations are performed correctly. Deploy it to 000webhost.com
+5. Create a web page for hospitals to add the details of COVID19+ patients.	
