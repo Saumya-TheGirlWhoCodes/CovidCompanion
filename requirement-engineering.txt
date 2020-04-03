@@ -44,6 +44,8 @@ Technical Implementation for each Step:
 	b. The field will be 
 			 patient_id (VARCHAR(50), PRIMARY_KEY), 
 			 patient_name (TEXT,100),
+			 age(NUMBER(3)),
+			 contact_number(NUMBER(10)),
 			 admitted_date (TIMESTAMP),
 			 hospital (TEXT,200),
 			 severity (VARCHAR,10),
@@ -66,6 +68,7 @@ Technical Implementation for each Step:
 		- update.php (Update a row in table if found).
 		- delete.php (Delete a row in table if found).
 		- image_upload.php(Upload image with patient_id.jpg to folder '/patients/')
+		- server.php (Create a Websocket server for location monitor).
 	d. Initially make the database and pHp files in XAMPP. 
 	e. Test the pHp API files with POSTMAN.
 	f. If CRUD operations are performed correctly. Deploy it to 000webhost.com
@@ -90,4 +93,22 @@ Technical Implementation for each Step:
 			d. Initially make the database and pHp files in XAMPP. 
 			e. Test the pHp API files with POSTMAN.
 			f. If CRUD operations are performed correctly. Deploy it to 000webhost.com
+
 5. Create a web page for hospitals to add the details of COVID19+ patients.	
+    a. Prototype uploaded to repository with name webpages_<<subject>>
+    b. Create Angular Project with name WebCovidCompanion and Style choice will be CSS
+    c. Create component RegisterComponent for registering the patients/doctors.
+    d. Create component LocationComponent for tracking patient live location.
+    e. Create component NavBarComponent for displaying MenuItems.
+    f. Create component DataTableComponent for creating Tables.
+    g. Create Models for Doctors and Patients same field as database field.
+    h. Create dynamic component loading form to load class fields based on models.
+    i. Create a service for doing CRUD operations on Doctor's Table.
+    j. Create another service for doing CRUD operations on Patient's Table.
+    i. Create another service that subscribe to Location using Websockets.
+
+6. (Additional) Create the push notifications for hospitals whenever patient ask for emergency.
+
+================================================================================================
+Status:
+
