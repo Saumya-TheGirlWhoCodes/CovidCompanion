@@ -1,0 +1,41 @@
+(Existing) Right now, suspected COVID patients or COVID+ patients are quarantined at home.
+(Existing) Providers lose visibility into patients once they are discharged and rely on phone calls for periodic checkins.
+(Development)Build a remote patient monitoring for patients who have symptoms and need to be homemonitored,patients who tested positive and have been discharged home, or have comorbid conditions that require closer monitoring. 
+(Additional Requirement) Potential for partnering with medical device companies that create digital thermometers or pulse oximeters.
+==============================================================================
+Existing:
+1. A citizen come to hospital for covid19 test.
+2. He/she found positive in test.
+3. Four cases are possible:
+	a. He/she is treated in the hospital.
+	b. He/she need to be home-monitered: Called by Doctor periodically
+	c. He/she is discharged home: Called by Doctor periodically
+	d. He/she requires close monitoring because of comorbid condition: Called by Doctor periodically/
+=================================================================================
+Research Exploration: Centre for Disease Control and Prevention.
+
+=================================================================================
+Solution:
+1. Create a centralized database for COVID19 patient if found positive.
+2. Update whether he/she has comorbid condition, as well as the severity in his/her case.
+3. Update whenever he get's discharged.
+4. Create a global database for the doctors who are treating the case for covid19 patient.
+5. Create a web page for hospitals to add the details of COVID19+ patients.
+6. (Additional) Create the push notifications for hospitals whenever patient ask for emergency.
+7. Create a location tab which allows the track patient location using patient ID.
+8. (Additional) Create map that shows location wise patients.
+9. Update the frequency for which the patient need to be checkins.
+10. Create an Android Application and install it in the patient smartphone.
+11. Patient should be logged using his/her patient ID.
+12. At a time on the day based on the frequecy set by the hospital the patient should be asked about the any problems with the given option: 1. Given Symptoms or 2. No Problems.
+13. If patient doesn't respond in 30 seconds by using his/her fingerprint or face along with selected choice.
+14. Alert would be sent to the doctor who treated the patient telling he is not well.
+15. Apart from frequency checks, if patient feels an emergent in medical condition there is emergency button that patient can press. The alert would sent globally to all doctor as a request 
+to treat the patient and any doctor could treat the patient.
+16. If doctor accepts the request he will be connected to the video stream with patient directly.
+17. Android Application for Doctor's perspective will contain the list of patient whom he treated.
+18. On clicking the patient from list they will show the graph which tells the patient cure progress.
+==================================================================================================
+Technical Implementation for each Step:
+
+
