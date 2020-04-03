@@ -28,7 +28,7 @@ Solution:
 10. Create an Android Application and install it in the patient smartphone.
 11. Patient should be logged using his/her patient ID.
 12. At a time on the day based on the frequecy set by the hospital the patient should be asked about the any problems with the given option: 1. Given Symptoms or 2. No Problems.
-13. If patient doesn't respond in 30 seconds by using his/her fingerprint or face along with selected choice.
+13. If patient doesn't respond in 5 minutes by using his/her fingerprint or face along with selected choice.
 14. Alert would be sent to the doctor who treated the patient telling he is not well.
 15. Apart from frequency checks, if patient feels an emergent in medical condition there is emergency button that patient can press. The alert would sent globally to all doctor as a request 
 to treat the patient and any doctor could treat the patient.
@@ -40,6 +40,7 @@ Technical Implementation for each Step:
 1. Create a centralized database for COVID19 patient if found positive.
 2. Update whether he/she has comorbid condition, as well as the severity in his/her case.
 3. Update whenever he get's discharged.
+9. Update the frequency for which the patient need to be checkins.
 	a. Create an SQL based database table on 000webhost.com
 	b. The field will be 
 			 patient_id (VARCHAR(50), PRIMARY_KEY), 
@@ -60,6 +61,7 @@ Technical Implementation for each Step:
 			 is_comorbid (BOOLEAN),
 			 diseases (TEXT(400)),
 			 discharge_date (TIMESTAMP),
+			 frequency_checkin(NUMBER(10))
 			 image_of_patient (URL,100)
 	c. Writing pHp files for CRUD (Create, Read, Update, Delete) operations.
 		- connect.php (Database Connection).
@@ -69,6 +71,8 @@ Technical Implementation for each Step:
 		- delete.php (Delete a row in table if found).
 		- image_upload.php(Upload image with patient_id.jpg to folder '/patients/')
 		- server.php (Create a Websocket server for location monitor).
+		- push.php (Create a Web Push Server to send push notifications on website
+			using https://github.com/web-push-libs/web-push-php ).
 	d. Initially make the database and pHp files in XAMPP. 
 	e. Test the pHp API files with POSTMAN.
 	f. If CRUD operations are performed correctly. Deploy it to 000webhost.com
@@ -96,18 +100,44 @@ Technical Implementation for each Step:
 
 5. Create a web page for hospitals to add the details of COVID19+ patients.	
     a. Prototype uploaded to repository with name webpages_<<subject>>
-    b. Create Angular Project with name WebCovidCompanion and Style choice will be CSS
-    c. Create component RegisterComponent for registering the patients/doctors.
-    d. Create component LocationComponent for tracking patient live location.
-    e. Create component NavBarComponent for displaying MenuItems.
-    f. Create component DataTableComponent for creating Tables.
-    g. Create Models for Doctors and Patients same field as database field.
-    h. Create dynamic component loading form to load class fields based on models.
-    i. Create a service for doing CRUD operations on Doctor's Table.
-    j. Create another service for doing CRUD operations on Patient's Table.
-    i. Create another service that subscribe to Location using Websockets.
+    b. Create Angular Project with name WebCovidCompanion and Style choice will be CSS.
+    Open Project in Visual Studio Code.
+    c. Install @angular/material using npm or yarn task runner.
+    d. Install @bootstrap using npm or yarn task runner.
+    e.Create component RegisterComponent for registering the patients/doctors.
+    f. Create component LocationComponent for tracking patient live location.
+    g. Create component NavBarComponent for displaying MenuItems.
+    h. Create component DataTableComponent for creating Tables.
+    i. Create MapComponent for rendering maps along with data.
+    j. Create Models for Doctors and Patients same field as database field.
+    k. Create dynamic component loading form to load class fields based on models.
+    l. Create a service for doing CRUD operations on Doctor's Table.
+    m. Create another service for doing CRUD operations on Patient's Table.
+    n. Create another service that subscribe to Location using Websockets.
 
 6. (Additional) Create the push notifications for hospitals whenever patient ask for emergency.
+		a. Create a PushNotificationListComponent which contains list of notifications.
+		b. Create a PushNotificationComponent to show single push-notification component.
+		c. Create a service which contains BehaviorSubject<Object> to subscribe to push messages.
+7. Create a location tab which allows the track patient location using patient ID.
+		a. Goto app.module.ts inside that declare routes using Angular routers.
+		b. for LocationComponent declare '/location/' in route paths.
+		c. Add the menu name 'Locations' in NavBarComponent template.
+		d. Add onclick method in the template tag of Locations and call the method 'goToLocations()'
+		e. declare 'goToLocations()' method in NavBarComponent and call angular routers to load 
+		   LocationComponent.
+		f. Use the MapComponent inside the LocationComponent and pass the data.
+		g. Goto MapComponent and write the business logic to render map based on the data using     https://developers.google.com/maps/documentation/javascript/tutorial
+8. (Additional) Create map that shows location wise patients.
+		a. Inside the LocationComponent provide radio buttons
+		b. First: For Specific Patient , Second: By Locality
+		c. On selection,For specific patient: Load MapComponent with Live Location.
+		d. On selection, By Locality: Load MapComponent with All Database Locations for Markers.
+
+10. Create an Android Application and install it in the patient smartphone.
+		a. Create Android Application with name CovidCamponionApp.
+		b. Prototypes for the UI are on github with name app_<<subject>>.
+		
 
 ================================================================================================
 Status:
