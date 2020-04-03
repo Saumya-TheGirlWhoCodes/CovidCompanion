@@ -2,7 +2,7 @@
 (Existing) Providers lose visibility into patients once they are discharged and rely on phone calls for periodic checkins.
 (Development)Build a remote patient monitoring for patients who have symptoms and need to be homemonitored,patients who tested positive and have been discharged home, or have comorbid conditions that require closer monitoring. 
 (Additional Requirement) Potential for partnering with medical device companies that create digital thermometers or pulse oximeters.
-==============================================================================
+==================================================================================
 Existing:
 1. A citizen come to hospital for covid19 test.
 2. He/she found positive in test.
