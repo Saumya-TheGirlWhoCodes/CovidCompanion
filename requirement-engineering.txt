@@ -12,6 +12,9 @@ Existing:
 	c. He/she is discharged home: Called by Doctor periodically
 	d. He/she requires close monitoring because of comorbid condition: Called by Doctor periodically/
 =================================================================================
+Research Exploration: Centre for Disease Control and Prevention.
+
+=================================================================================
 Solution:
 1. Create a centralized database for COVID19 patient if found positive.
 2. Update whether he/she has comorbid condition, as well as the severity in his/her case.
