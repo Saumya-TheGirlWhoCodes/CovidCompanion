@@ -146,10 +146,16 @@ Status:
 			(12:00) Installed Angular Material and Bootstrap for Look and Feel. 
 			(16:07) Created models(MVC architecture pattern) for Doctor and Patient.
 			(16:23) Task 5(g): Navigation Component generated.
-
+			(19:05) Navigation Completed UI completed.
+6th April 2020:-
+			(01:30) Doctor's Dashboard UI ready.
 
 
 =================================================================================================
 Known Issues:
 5th April 2020:-
 				(16:30) No Known Issues So Far.
+6th April 2020:-
+			(01:30) Doctor's Dashboard 'new doctor' button and heading alignment issue.
+
+
