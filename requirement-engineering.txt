@@ -101,7 +101,7 @@ Technical Implementation for each Step:
 5. Create a web page for hospitals to add the details of COVID19+ patients.	
     a. Prototype uploaded to repository with name webpages_<<subject>>
     b. Create Angular Project with name WebCovidCompanion and Style choice will be CSS.
-    Open Project in Visual Studio Code.
+    Open Project in Angular IDE.
     c. Install @angular/material using npm or yarn task runner.
     d. Install @bootstrap using npm or yarn task runner.
     e.Create component RegisterComponent for registering the patients/doctors.
@@ -141,4 +141,15 @@ Technical Implementation for each Step:
 
 ================================================================================================
 Status:
+4th April 2020:- (19:30)Setup the Angular Application Environment.
+5th April 2020:-
+			(12:00) Installed Angular Material and Bootstrap for Look and Feel. 
+			(16:07) Created models(MVC architecture pattern) for Doctor and Patient.
+			(16:23) Task 5(g): Navigation Component generated.
 
+
+
+=================================================================================================
+Known Issues:
+5th April 2020:-
+				(16:30) No Known Issues So Far.
