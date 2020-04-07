@@ -1,9 +1,3 @@
-<mat-card>
-    <mat-card-title style="text-align:center;">Covid Companion</mat-card-title>
-</mat-card>
 <mat-card style="background:red">
-    <button mat-raised-button style="margin-right:2%">Patients</button>
-    <button mat-raised-button style="margin-right:2%">Locations</button>
-    <button mat-raised-button style="margin-right:2%">Doctors</button>
-    <button mat-raised-button style="margin-right:2%">FAQ</button>
+    <button mat-raised-button style="margin-right:2%" *ngFor="let menu of navMenu">{{menu}}</button>
 </mat-card>

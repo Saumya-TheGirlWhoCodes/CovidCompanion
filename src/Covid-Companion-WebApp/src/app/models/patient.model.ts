@@ -1,7 +1,7 @@
 import { CovidSymptoms } from './covid-symptoms';
 import { Location } from './location';
 
-export class Patient {
+export class Patient  {
  private patientId: number;
  private patientName: string;
  private patientImage: File;

@@ -1,0 +1,22 @@
+<mat-card>
+    <form>
+    <mat-card-header>
+    <h2 class="display-2">{{formHeading}}</h2>
+    </mat-card-header>
+<mat-card-content>
+    <div *ngFor="let control of formControls;let i=index;">
+    <mat-form-field *ngIf="!control.selectData">
+        <mat-label>{{control.name}}</mat-label>
+        <input id="{{i}}" type="{{control.control}}" matInput>
+    </mat-form-field>
+    <mat-form-field *ngIf="control.selectData">
+        <mat-label>{{control.name}}</mat-label>
+        <mat-select id="{{i}}">
+            <mat-option *ngFor="let option of control.selectData" value="{{option}}" >{{option}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button (click)="performOperation()"></button>    
+</div>
+</mat-card-content>
+</form>
+</mat-card>

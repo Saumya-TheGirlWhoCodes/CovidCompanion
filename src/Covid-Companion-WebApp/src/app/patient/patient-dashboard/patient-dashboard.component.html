@@ -1,1 +1,16 @@
-<p>patient-dashboard works!</p>
+<mat-card style="width: 100%;">
+<mat-mat-card-header>
+    <app-header></app-header>
+    <app-navigation [navMenu]="menuItems"></app-navigation>
+    <div style="display: inline-flexbox;" >
+        <h2 style="margin-top:3%;" >Patient's List</h2>
+        <button class="btn btn-primary" style="float:right;margin-right:2%;">New Patient</button>
+    </div>  
+</mat-mat-card-header>
+<mat-card-content>
+    <app-table-representation></app-table-representation>   
+</mat-card-content>
+<mat-card-footer style="margin-top: 10%;">
+   
+</mat-card-footer>
+</mat-card>

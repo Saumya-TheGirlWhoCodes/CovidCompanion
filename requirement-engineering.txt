@@ -108,7 +108,7 @@ Technical Implementation for each Step:
     f. Create component LocationComponent for tracking patient live location.
     g. Create component NavBarComponent for displaying MenuItems.
     h. Create component DataTableComponent for creating Tables.
-    i. Create MapComponent for rendering maps along with data.
+    i. Create MapRenderComponent for rendering maps along with data.
     j. Create Models for Doctors and Patients same field as database field.
     k. Create dynamic component loading form to load class fields based on models.
     l. Create a service for doing CRUD operations on Doctor's Table.
@@ -144,7 +144,7 @@ Status:
 4th April 2020:- (19:30)Setup the Angular Application Environment.
 5th April 2020:-
 			(12:00) Installed Angular Material and Bootstrap for Look and Feel. 
-			(16:07) Created models(MVC architecture pattern) for Doctor and Patient.
+			(16:07) Task 5(j):Created models(MVC architecture pattern) for Doctor and Patient.
 			(16:23) Task 5(g): Navigation Component generated.
 			(19:05) Navigation Completed UI completed.
 6th April 2020:-

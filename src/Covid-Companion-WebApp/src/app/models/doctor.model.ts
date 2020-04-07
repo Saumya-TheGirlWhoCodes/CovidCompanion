@@ -1,5 +1,4 @@
 export class Doctor {
-
     private doctorId: string;
     private doctorName: string;
     private doctorImage: File;
